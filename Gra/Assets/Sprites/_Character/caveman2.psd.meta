@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: ccb1003109e3e034f87f7232ce0c2251
+timeCreated: 1448492434
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: caveman_head
+    21300002: caveman_rightArm
+    21300004: caveman_body
+    21300006: caveman_leftLeg
+    21300008: caveman_rightLeg
+    21300010: caveman_leftArm
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: caveman_head
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 663
+        width: 120
+        height: 120
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caveman_rightArm
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 663
+        width: 77
+        height: 111
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caveman_body
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 626
+        width: 122
+        height: 137
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caveman_leftLeg
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 642
+        width: 66
+        height: 97
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caveman_rightLeg
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 646
+        width: 68
+        height: 93
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caveman_leftArm
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 549
+        width: 90
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 0182f7553eafd8a46bdad52a9f5bb0f4
+timeCreated: 1452271755
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dinosaurBoss_0
+    21300002: dinosaurBoss_1
+    21300004: dinosaurBoss_2
+    21300006: dinosaurBoss_3
+    21300008: dinosaurBoss_4
+    21300010: dinosaurBoss_5
+    21300012: dinosaurBoss_6
+    21300014: dinosaurBoss_7
+    21300016: dinosaurBoss_8
+    21300018: dinosaurBoss_9
+    21300020: dinosaurBoss_10
+    21300022: dinosaurBoss_11
+    21300024: dinosaurBoss_12
+    21300026: dinosaurBoss_13
+    21300028: dinosaurBoss_14
+    21300030: dinosaurBoss_15
+    21300032: dinosaurBoss_16
+    21300034: dinosaurBoss_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dinosaurBoss_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 144
+        height: 90
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 260
+        width: 150
+        height: 98
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 260
+        width: 148
+        height: 94
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 222
+        width: 141
+        height: 130
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 262
+        width: 150
+        height: 90
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_5
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 260
+        width: 144
+        height: 92
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_6
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 258
+        width: 149
+        height: 94
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_7
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 348
+        width: 4
+        height: 4
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_8
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 332
+        width: 4
+        height: 4
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 140
+        height: 104
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 98
+        width: 152
+        height: 87
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_11
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 98
+        width: 150
+        height: 90
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_12
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 100
+        width: 154
+        height: 78
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 128
+        height: 90
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_14
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 112
+        height: 80
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2
+        width: 4
+        height: 4
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_16
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 2
+        width: 110
+        height: 76
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dinosaurBoss_17
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 2
+        width: 155
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
