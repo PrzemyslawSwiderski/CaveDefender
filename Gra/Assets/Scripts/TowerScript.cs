@@ -9,7 +9,9 @@ public class TowerScript : MonoBehaviour
 	public GameObject turretEnd;
 	public float spawnDelay;
 	public float spawnRepeatRate;
-	
+	float xToRand=-16;
+	float yToRand=10;
+
 	public Rigidbody2D arrow;				
 
 	// Use this for initialization
@@ -23,12 +25,12 @@ public class TowerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (GameManager.instance.buildStones > 150 && !turretMiddleBuilt) {
+		if (GameManager.instance.buildStones > (GameManager.instance.buildStonesToBuildTower/2) && !turretMiddleBuilt) {
 			Instantiate (turretMiddle, transform.position, transform.rotation);
 			turretMiddleBuilt=true;
 		}
 		
-		if (GameManager.instance.buildStones > 350) {
+		if (GameManager.instance.buildStones > GameManager.instance.buildStonesToBuildTower) {
 			Instantiate (turretEnd, transform.position, transform.rotation);
 			GameManager.instance.towerBuilded = true;
 			GameManager.instance.buildStones = 0;
@@ -37,9 +39,12 @@ public class TowerScript : MonoBehaviour
 	void SpawnArrow()
 	{
 		if (GameManager.instance.towerBuilded) {
-			Rigidbody2D bulletInstance = Instantiate (arrow, new Vector2 (transform.position.x + 1, transform.position.y), Quaternion.Euler (new Vector3 (0, 0, 150))) as Rigidbody2D;
-			bulletInstance.velocity = new Vector2(transform.localScale.x * -20.8f, transform.localScale.y * 10);
-			
+			yToRand=Random.Range(0,20);
+			Rigidbody2D bulletInstance = Instantiate (arrow, new Vector2 (transform.position.x + 1, transform.position.y), Quaternion.Euler (new Vector3 (0, 0, Vector2.Angle(new Vector2(0,1),new Vector2(xToRand,yToRand))+90))) as Rigidbody2D;
+			//bulletInstance.velocity = new Vector2(transform.localScale.x * -20.8f, transform.localScale.y * 10);
+			bulletInstance.velocity = new Vector2(xToRand, yToRand);
+			//bulletInstance.velocity =Quaternion.AngleAxis(xToRand, Vector3.up).eulerAngles;
+
 		}
 	}
 }

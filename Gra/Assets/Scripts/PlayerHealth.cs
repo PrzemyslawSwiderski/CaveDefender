@@ -48,40 +48,30 @@ public class PlayerHealth : MonoBehaviour
 	void OnCollisionStay2D (Collision2D col)
 	{
 		// If the colliding gameobject is an Enemy...
-		if ((col.gameObject.tag == "Enemy" && !col.gameObject.GetComponent<Enemy>().dead) || 
-		    (col.gameObject.tag == "Enemy2" && !col.gameObject.GetComponent<Enemy2>().dead) || 
-		    	(col.gameObject.tag == "Boss" && !col.gameObject.GetComponent<EnemyBoss>().dead)) {
-			// ... and if the time exceeds the time of the last hit plus the time between hits...
+		if ((col.gameObject.tag == "Enemy" && !col.gameObject.GetComponent<Enemy> ().dead) || 
+			(col.gameObject.tag == "Enemy2" && !col.gameObject.GetComponent<Enemy2> ().dead) || 
+			(col.gameObject.tag == "Boss" && !col.gameObject.GetComponent<EnemyBoss> ().dead)) {
+
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
-				// ... and if the player still has health...
 				if (health > 0f) {
-					// ... take damage and reset the lastHitTime.
 					TakeDamage (col.transform); 
 					lastHitTime = Time.time; 
 				} else {
-					alive = false;
-					// ... disable user Player Control script
-					GetComponent<EasyMovement> ().enabled = false;
-					GetComponentInChildren<ChangeWeapon> ().enabled = false;
-
-					transform.Find ("RightArm").Find ("Bow").gameObject.SetActive (false);
-
-					transform.Find ("RightArm").Find ("Spear").gameObject.SetActive (false);
-
-					// ... Trigger the 'Die' animation state
-					anim.SetTrigger ("Die");
-
-
-					//Invoke ("Respawn", 2.0F);
+					Death ();
 				}
 			}
 		}
 		
-		if ((col.gameObject.tag == "Player" || col.gameObject.tag == "Player2") && !alive) {
-			Resurrection ();
+		if ((col.gameObject.tag == "Player" || col.gameObject.tag == "Player2")) {
+			anim.speed=0;
+			if (!alive)
+				Resurrection ();
 		}
 	}
-
+	void OnCollisionExit2D (Collision2D col)
+	{
+		anim.speed = 1;
+	}
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.gameObject.tag == "Loot" && col.IsTouching (GetComponent<BoxCollider2D> ())) {
@@ -98,14 +88,7 @@ public class PlayerHealth : MonoBehaviour
 			if (health > 0f) {
 				TakeDamage (col.transform); 
 			} else {
-				GetComponent<EasyMovement> ().enabled = false;
-				GetComponent<Rigidbody2D> ().isKinematic = true;
-				GetComponentInChildren<ChangeWeapon> ().enabled = false;
-				transform.Find ("RightArm").Find ("Bow").gameObject.SetActive (false);
-				transform.Find ("RightArm").Find ("Spear").gameObject.SetActive (false);
-				alive = false;
-				anim.SetTrigger ("Die");
-				//Invoke ("Respawn", 3.0F);
+				Death ();
 			}
 			if (col.gameObject.tag == "Bullet") {
 				Destroy (col.gameObject);
@@ -115,6 +98,7 @@ public class PlayerHealth : MonoBehaviour
 
 	void Resurrection ()
 	{
+		anim.speed=1;
 		if (health < fullHealth) {
 			transform.Find ("RightArm").Find ("Bow").gameObject.SetActive (false);
 			transform.Find ("RightArm").Find ("Spear").gameObject.SetActive (false);
@@ -161,13 +145,16 @@ public class PlayerHealth : MonoBehaviour
 		UpdateHealthBar ();
 	}
 
-	public void getHealth (Transform enemy)
-	{
-		// Reduce the player's health by 10.
-		health += damageAmount;
-
-		// Update what the health bar looks like.
-		UpdateHealthBar ();
+	void Death ()
+	{	
+		alive = false;
+		GameManager.instance.displayNotify (gameObject.tag + " is dead, touch him to ressurect.");
+		GetComponent<EasyMovement> ().enabled = false;
+		GetComponent<Rigidbody2D> ().isKinematic = true;
+		GetComponentInChildren<ChangeWeapon> ().enabled = false;
+		transform.Find ("RightArm").Find ("Bow").gameObject.SetActive (false);
+		transform.Find ("RightArm").Find ("Spear").gameObject.SetActive (false);
+		anim.SetTrigger ("Die");
 	}
 
 	public void UpdateHealthBar ()

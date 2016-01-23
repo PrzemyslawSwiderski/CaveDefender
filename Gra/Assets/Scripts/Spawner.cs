@@ -24,9 +24,7 @@ public class Spawner : MonoBehaviour
 		if (countMode) {
 			for (int i=0; i<howManyToSpawn; i++)
 				Invoke ("Spawn", spawnDelay * i);
-		} else {
-			InvokeRepeating ("Spawn", spawnDelay, spawnTime);
-		}
+		} 
 	}
 
 	void Spawn ()
@@ -40,6 +38,7 @@ public class Spawner : MonoBehaviour
 			Invoke ("spawnArrow", 1.0f);
 			transform.Translate (-translate, 0, 0);
 		} else {
+			Instantiate (warning, transform.position, transform.rotation);
 			Instantiate (enemy, transform.position, transform.rotation);
 		}
 	}

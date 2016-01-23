@@ -66,8 +66,6 @@ public class Enemy : MonoBehaviour
 			GetComponent<Collider2D> ().enabled = false;
 			dead = true;
 
-			Debug.Log ("1Current animator clip length " + anim.GetCurrentAnimatorStateInfo (0).length);
-			Debug.Log ("2Current animator clip length " + anim.GetCurrentAnimatorClipInfo (0) [0].clip.length);
 			Invoke ("Death", anim.GetCurrentAnimatorStateInfo (0).length);
 		}
         
